@@ -39,3 +39,4 @@ web404-assignment1/
 - express-session (login state)
 - csrf-csrf (CSRF protection)
 
+See [docs/REPORT.md](docs/REPORT.md) for the complete writeup with screenshots.
