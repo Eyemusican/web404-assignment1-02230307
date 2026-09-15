@@ -3,14 +3,9 @@
 **Student:** Tenzin Namgay (Cuney)
 **Student ID:** 02230307
 
-## Practicals
+## Topic
 
-| # | Practical | Status |
-|---|-----------|--------|
-| 1 | Nikto Scan | Not started |
-| 2 | Command Injection | Not started |
-| 5 | SQL Injection | Not started |
-| 6 | CSRF | Not started |
+**CSRF (Cross Site Request Forgery)**
 
 ## Folder Structure
 
@@ -18,30 +13,29 @@
 web404-assignment1/
 ├── README.md
 ├── .gitignore
-├── practical-1-nikto-scan/
-│   └── README.md
-├── practical-2-command-injection/
-│   └── README.md
-├── practical-5-sql-injection/
-│   └── README.md
 ├── practical-6-csrf/
-│   └── README.md
+│ ├── README.md
+│ ├── server.js
+│ └── views/
 ├── screenshots/
-│   └── README.md
+│ └── (8 screenshots documenting the vulnerability, attack, and fix)
 └── docs/
-    └── README.md
+└── README.md (full report)
+
 ```
+
 
 ## Approach
 
-Each practical follows the same structure:
-
-1. **Vulnerable version** — a small app or endpoint that deliberately contains the vulnerability being studied.
-2. **Attack demo** — a walkthrough showing the vulnerability being exploited.
-3. **Fix** — the code changed to remediate the vulnerability, following secure coding best practices.
-4. **Re-test** — confirmation that the attack no longer works against the fixed version.
+1. **Vulnerable version** — an account page with an email update form that has no CSRF protection.
+2. **Attack demo** — a separate malicious page that silently submits a request to change the victim's email.
+3. **Fix** — CSRF tokens added using the csrf-csrf package, verified on every state changing request.
+4. **Re-test** — confirmed the same attack now fails, and the legitimate form still works normally.
 
 ## Tech Stack
 
 - Node.js + Express
-- SQLite
+- EJS (templating)
+- express-session (login state)
+- csrf-csrf (CSRF protection)
+
