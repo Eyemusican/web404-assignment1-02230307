@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Account - CSRF Demo</title>
+</head>
+<body>
+  <h1>My Account</h1>
+  <p>Current email: <strong><%= email %></strong></p>
+
+  <form action="/update-email" method="POST">
+    <input type="hidden" name="csrf_csrf" value="<%= csrfToken %>" />
+    <label>
+      New email:
+      <input type="email" name="email" />
+    </label>
+    <button type="submit">Update Email</button>
+  </form>
+
+  <a href="/">Back home</a>
+</body>
+</html>

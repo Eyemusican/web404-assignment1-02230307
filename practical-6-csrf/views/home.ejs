@@ -9,6 +9,7 @@
 
   <% if (user) { %>
     <p>Logged in as <strong><%= user %></strong>.</p>
+    <a href="/account">My Account</a>
     <form action="/logout" method="POST">
       <button type="submit">Log out</button>
     </form>
