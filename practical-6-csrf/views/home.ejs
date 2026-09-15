@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSRF Demo</title>
+</head>
+<body>
+  <h1>CSRF Demo</h1>
+
+  <% if (user) { %>
+    <p>Logged in as <strong><%= user %></strong>.</p>
+    <form action="/logout" method="POST">
+      <button type="submit">Log out</button>
+    </form>
+  <% } else { %>
+    <p>Not logged in.</p>
+    <a href="/login">Log in</a>
+  <% } %>
+
+  <!-- Placeholder page. No data-changing form here yet — that comes later. -->
+</body>
+</html>

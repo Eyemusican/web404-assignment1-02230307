@@ -1,0 +1,15 @@
+{
+  "name": "csrf-demo",
+  "version": "1.0.0",
+  "description": "CSRF vulnerability demo for WEB404 Assignment 1",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0"
+  }
+}
